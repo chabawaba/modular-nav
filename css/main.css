@@ -10,9 +10,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-
   font-family: sans-serif;
-  text-decoration: none;
 }
 
 *, *::before, *::after {
@@ -23,31 +21,73 @@ body {
   margin: 0;
 }
 
-li {
-  color: #0074d9;
-  display: inline-block;
-}
-
-a:hover {
-  color: white;
-  background-color: #0074d9;
-
-}
-
-nav {
+header {
+  padding-bottom: 5px;
   background-color: #e2e2e2;
 }
 
-@media only screen and (min-width:25em ) {
-  ul {
+header h1 {
+  margin: 0;
+  text-align: left;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: .5em .75em;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #0074d9;
+}
+
+nav a:hover {
+  background-color: #0074d9;
+  color: #fff;
+}
+
+@media only screen and (min-width: 25em) {
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  nav li {
+    width: 50%;
+
     text-align: center;
   }
 
+}
+
+@media only screen and (min-width: 38em) {
+
+  nav li {
+    width: 25%;
   }
 
-@media only screen and (min-width:38em ) {
-  ul {
-    text-align: left;
+}
+
+@media only screen and (min-width: 60em) {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .75rem;
   }
 
+  nav li {
+    width: auto;
   }
+
+}
